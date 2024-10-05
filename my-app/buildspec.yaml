@@ -10,5 +10,5 @@ phases:
       - npm install --force && npm install -g @angular/cli
       - npm run build
       - cd build
-      - aws s3 sync build/ s3://rxhxl-portfolio-bucket
+      - aws s3 sync . s3://rxhxl-portfolio-bucket
       - aws cloudfront create-invalidation --distribution-id E2R4D1DA76861U --paths /* 

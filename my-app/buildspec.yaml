@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+
+  build:
+    commands:
+      - npm install --force && npm install -g @angular/cli
+      - npm run build
+      - aws s3 sync build/ s3://rxhxl-portfolio-bucket
+      - aws cloudfront create-invalidation --distribution-id E2R4D1DA76861U --paths /* 

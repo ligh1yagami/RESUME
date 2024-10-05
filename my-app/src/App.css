@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   border:none;
-  background-color: rgb(18, 28, 26);
+  background-color: #131314;
   height: 100vh;
   width: 100vw
 }
@@ -26,6 +26,11 @@
    text-decoration: none;
    font-size:x-large;
    font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+
 }
 
 
@@ -35,9 +40,42 @@
 }
 
 .gradient{
-  background: linear-gradient(to right, #a992f0, #e51758);
+  background: linear-gradient(to right,#6080E8, #23f3db);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+.gradient {
+  background: linear-gradient(to right,#6080E8, #23f3db, #6080E8,rgb(242, 92, 142));
+  background-size: 200% auto; /* Allows the background to be larger than the text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: glow 3s linear infinite alternate; /* Applying the animation */
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 25% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.main {
+  color: white;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

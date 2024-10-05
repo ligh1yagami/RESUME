@@ -6,8 +6,8 @@ phases:
 
   build:
     commands:
+      - cd my-app
       - npm install --force && npm install -g @angular/cli
-      - cd my-app 
       - npm run build
       - cd build
       - aws s3 sync build/ s3://rxhxl-portfolio-bucket

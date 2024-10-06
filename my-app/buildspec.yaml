@@ -11,4 +11,4 @@ phases:
       - npm run build
       - cd build
       - aws s3 sync . s3://rxhxl-portfolio-bucket
-      - aws cloudfront create-invalidation --distribution-id E4Y9DXT2MCPYL --paths /* 
+      - aws cloudfront create-invalidation --distribution-id E4Y9DXT2MCPYL --paths '/*' 

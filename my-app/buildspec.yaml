@@ -6,6 +6,7 @@ phases:
 
   build:
     commands:
+      - gibberiesh
       - cd my-app
       - npm install --force && npm install -g @angular/cli
       - npm run build
